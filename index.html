@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consultorio Spa - Bienestar y Belleza</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #76b5c5;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    nav {
+      background: #4d8c9b;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #4d8c9b;
+    }
+    .servicio {
+      margin-bottom: 20px;
+    }
+    form {
+      display: grid;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      background: #4d8c9b;
+      color: white;
+      padding: 10px;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #3a6b77;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+    footer {
+      background: #4d8c9b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Consultorio Spa "Bienestar & Belleza"</h1>
+    <p>Relájate, renueva y revitaliza tu cuerpo y mente</p>
+  </header>
+
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#ubicacion">Ubicación</a>
+  </nav>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="servicio">
+      <h3>Masaje relajante</h3>
+      <p>Reduce el estrés y la tensión muscular con un masaje suave y profundo.</p>
+    </div>
+    <div class="servicio">
+      <h3>Facial hidratante</h3>
+      <p>Tratamiento facial personalizado para revitalizar e hidratar tu piel.</p>
+    </div>
+    <div class="servicio">
+      <h3>Limpieza profunda</h3>
+      <p>Elimina impurezas y renueva la piel con tecnología avanzada.</p>
+    </div>
+    <div class="servicio">
+      <h3>Terapia de aromaterapia</h3>
+      <p>Relajación total mediante aceites esenciales naturales.</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Solicita información</h2>
+    <form id="formulario">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+    <p id="respuesta" style="color: green; margin-top: 10px;"></p>
+  </section>
+
+  <section id="ubicacion">
+    <h2>¿Dónde estamos?</h2>
+    <p>Visítanos en nuestra sucursal en el centro de la ciudad:</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.2158663895954!2d-103.34960978474335!3d20.6749883048766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b169e0d4a4d9%3A0xa6b0a6886225a8b1!2sGuadalajara%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1665361924476!5m2!1ses-419!2smx" 
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 Consultorio Spa Bienestar & Belleza | Todos los derechos reservados
+  </footer>
+
+  <script>
+    document.getElementById('formulario').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('respuesta').textContent = 'Gracias por tu mensaje. Te responderemos pronto.';
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

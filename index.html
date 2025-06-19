@@ -31,6 +31,17 @@
       text-decoration: none;
       font-weight: bold;
     }
+ .logo-container {
+   text-align: center;
+   padding: 1em 0 0.5em;
+ }
+ .logo-container img {
+   max-width: 300px;
+   width: 80%;
+   border-radius: 50%;
+   margin: 0;
+   padding: 0;
+ } 
     .seccion-relajacion {
       margin-top: 0;
       background-image: url('spa-fondo.jpg');
@@ -93,9 +104,9 @@
    color: #2e4639;
    font-size: 0.95em;
  }
-    section {
+    section:not(.seccion-relajacion) {
       padding: 40px 20px;
-      max-width: 1000px;
+      max-width: 1400px;
       margin: auto;
       background: white;
       margin-top: 20px;
@@ -155,9 +166,8 @@
 <body>
 
   <div style="text-align: center;">
-  <img src="logo.png" alt="Logo BeWell" style="max-width: 400px; width: 80%; border-radius: 50%;">
+  <img src="logo.png" alt="Logo BeWell">
 </div>
-      </header>
 
   <nav>
     <a href="#servicios">Servicios</a>

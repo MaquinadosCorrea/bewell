@@ -19,6 +19,12 @@
       padding: 2em 1em;
       text-align: center;
     }
+<section class="seccion-relajacion">
+  <div class="contenido-centrado">
+    <h2>Relájate con Nosotros</h2>
+    <p>Descubre una experiencia única de bienestar en cada visita.</p>
+  </div>
+</section>
     nav {
       background: #4d8c9b;
       padding: 10px;
@@ -39,7 +45,7 @@
       border-radius: 10px;
     }
     h2 {
-      color: #d1dcce;
+      color: #33B8B3;
     }
     .servicio {
       margin-bottom: 20px;
@@ -55,6 +61,30 @@
       border-radius: 5px;
       font-size: 16px;
     }
+.seccion-relajacion {
+  background-image: url('spa-fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5em 2em;
+  text-align: center;
+  color: white;
+  font-size: 1.3em;
+  position: relative;
+}
+
+.seccion-relajacion::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Sombra suave para mejorar la lectura */
+  z-index: 1;
+}
+
+.seccion-relajacion .contenido-centrado {
+  position: relative;
+  z-index: 2;
+}
     button {
       background: #4d8c9b;
       color: white;

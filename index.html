@@ -204,6 +204,31 @@
  }
   </style>
 </head>
+<script>
+document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
+  e.preventDefault(); // Evita que se redirija
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      form.style.display = 'none'; // Oculta el formulario
+      document.getElementById('mensaje-exito').style.display = 'block'; // Muestra el mensaje
+    } else {
+      alert("Ocurrió un error. Intenta de nuevo.");
+    }
+  }).catch(error => {
+    alert("Ocurrió un error. Intenta de nuevo.");
+  });
+});
+</script>
 <body>
 
   <header>
@@ -269,8 +294,14 @@
     <!-- Honeypot Spam Protection -->
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-    <!-- Custom Confirmation / Success Page -->
-    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+    <div id="mensaje-exito" style="display: none; text-align: center; color: green;">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+        <path fill="#4CAF50" d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.5-1.5L9 16.2z"/>
+      </svg>
+      <p><strong>¡Enviado!</strong> Gracias por ponerse en contacto con nosotros.</p>
+    </div>
+  </div>
+</div>
 
      <button type="submit">Enviar</button>
 

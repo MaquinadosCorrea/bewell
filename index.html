@@ -251,12 +251,17 @@
   <h2>Contáctanos</h2>
   <div class="grid-contacto">
     <div class="formulario">
-      <form action="https://formsubmit.co/el/jececu" method="POST">
-  <input type="text" name="_formsubmit_id" style="display:none">
-  <input type="text" name="nombre" placeholder="Tu nombre" required>
-  <input type="email" name="correo" placeholder="Tu correo electrónico" required>
-  <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="5" required></textarea>
-  <button type="submit">Enviar mensaje</button>
+  <form action="https://formsubmit.co/el/jececu" method="POST">
+  <label for="name">Nombre:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Mensaje:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Enviar</button>
 </form>
     </div>
     <div class="ubicacion">

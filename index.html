@@ -70,7 +70,7 @@
       position: relative;
       z-index: 2;
       max-width: 800px;
-      margin: 0;
+      margin: 0 auto;
       font-size: 1.3em;
       text-align: center; 
     }
@@ -150,9 +150,9 @@
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
-      background: white;
       margin-top: 20px;
       border-radius: 10px;
+      background: transparent;
     }
     h2 {
       color: #33B8B3;
@@ -291,17 +291,15 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
 
     <label for="message">Mensaje:</label>
     <textarea name="message" required></textarea>
+
+    <button type="submit">Enviar</button>
+
     <div id="mensaje-exito" style="display: none; text-align: center; color: green;">
       <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
         <path fill="#4CAF50" d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.5-1.5L9 16.2z"/>
       </svg>
       <p><strong>¡Enviado!</strong> Gracias por ponerse en contacto con nosotros.</p>
-    </div>
-  </div>
-</div>
-
-     <button type="submit">Enviar</button>
-
+    </div>    
 </form>
      </div>
     <div class="ubicacion">

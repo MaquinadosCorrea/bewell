@@ -72,6 +72,7 @@
       max-width: 800px;
       margin: 0;
       font-size: 1.3em;
+      text-align: center; 
     }
   .cards-servicios {
    display: grid;
@@ -278,13 +279,11 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
   <h2>Contáctanos</h2>
   <div class="grid-contacto">
     <div class="formulario">
-<form action="https://api.web3forms.com/submit" method="POST">
+     <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="957a693e-d678-4412-9c1e-fef570d70dc6">
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-    <!-- Replace with your Access Key -->
-    <<input type="hidden" name="access_key" value="957a693e-d678-4412-9c1e-fef570d70dc6">
-
-    <!-- Form Inputs. Each input must have a name="" attribute -->
-    <label for="name">Nombre:</label>
+        <label for="name">Nombre:</label>
     <input type="text" name="name" required>
 
     <label for="email">Correo electrónico:</label>
@@ -292,10 +291,6 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
 
     <label for="message">Mensaje:</label>
     <textarea name="message" required></textarea>
-
-    <!-- Honeypot Spam Protection -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
     <div id="mensaje-exito" style="display: none; text-align: center; color: green;">
       <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
         <path fill="#4CAF50" d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.5-1.5L9 16.2z"/>

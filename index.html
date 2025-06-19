@@ -251,22 +251,31 @@
   <h2>Contáctanos</h2>
   <div class="grid-contacto">
     <div class="formulario">
-  <form action="https://formsubmit.co/bewell180625@gmail.com" method="POST">
-  <label for="name">Nombre:</label>
-  <input type="text" id="name" name="name" required>
+<form action="https://api.web3forms.com/submit" method="POST">
 
-  <label for="email">Correo electrónico:</label>
-  <input type="email" id="email" name="email" required>
-  
-  <label for="email">Asunto:</label>
-  <input type="text" name="subject" placeholder="Asunto">
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="957a693e-d678-4412-9c1e-fef570d70dc6" value="YOUR_ACCESS_KEY_HERE">
 
-  <label for="message">Mensaje:</label>
-  <textarea id="message" name="message" required></textarea>
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+    <label for="name">Nombre:</label>
+    <input type="text" name="name" required>
 
-  <button type="submit">Enviar</button>
+    <label for="email">Correo electrónico:</label>
+    <input type="email" name="email" required>
+
+    <label for="message">Mensaje:</label>
+    <textarea name="message" required></textarea>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+    <button type="submit">Submit Form</button>
+
 </form>
-    </div>
+     </div>
     <div class="ubicacion">
       <p style="margin-top: 0;">Visítanos en nuestra sucursal en plaza San Marcos:</p>
       <iframe 

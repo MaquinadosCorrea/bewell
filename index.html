@@ -24,7 +24,7 @@
 
     nav {
       background: #33B8B3;
-      padding: 10px;
+      padding: 0px;
       text-align: center;
     }
     nav a {
@@ -47,12 +47,12 @@
  } 
     .seccion-relajacion {
       margin-top: 0;
+      padding-top: 0;
       background-image: url('spa-fondo.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       width: 100%;
-      padding: 4em 2em;
       text-align: center;
       color: white;
       position: relative;
@@ -100,7 +100,15 @@
   height: 100%;
   overflow: hidden;
   background: #33B8B3;
-
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* Centrado vertical */
+  align-items: center;       /* Centrado horizontal */
+  text-align: center;
+  font-size: 1.5em;
+  overflow-y: auto;
 }
 
 .card:hover .card-inner,

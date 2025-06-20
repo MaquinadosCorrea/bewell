@@ -24,8 +24,10 @@
 
     nav {
       background: #33B8B3;
-      padding: 0px;
+      padding: 10px;
       text-align: center;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
     nav a {
       color: white;
@@ -46,13 +48,14 @@
    display: inline-block;
  } 
     .seccion-relajacion {
-      margin-top: 0;
-      padding-top: 0;
+      margin: 0 !important;
+      padding: 0 !important;
       background-image: url('spa-fondo.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       width: 100%;
+      padding: 4em 2em;
       text-align: center;
       color: white;
       position: relative;
@@ -85,7 +88,7 @@
   perspective: 1000px;
   border-radius: 20px;
   width: 100%;
-  aspect-ratio: 1 / 0.70; 
+  aspect-ratio: 1 / 0.85; 
   overflow: hidden;
 }
 .card-inner {
@@ -95,20 +98,15 @@
   transition: transform 0.6s;
   transform-style: preserve-3d;
   border-radius: 20px;
+  overflow: hidden;
 }
 .card-back {
   height: 100%;
   overflow: hidden;
   background: #33B8B3;
-  transform: rotateY(180deg);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;   /* Centrado vertical */
-  align-items: center;       /* Centrado horizontal */
-  text-align: center;
-  font-size: 1.5em;
+  box-sizing: border-box;
   overflow-y: auto;
+
 }
 
 .card:hover .card-inner,
@@ -137,7 +135,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain; 
-  border-radius: 20px;
+  border-radius: 20px 20px;
   flex-grow: 1;
 }
 .card-front button {

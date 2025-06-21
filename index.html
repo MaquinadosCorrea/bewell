@@ -248,7 +248,7 @@ card-front button {
      padding: 20px 10px;
    }
 .card {
-    aspect-ratio: 1 / 1; /* 🔹 Más espacio vertical */
+    aspect-ratio: 1 / 0.8; /* 🔹 Más espacio vertical */
   }
 }
 
@@ -382,6 +382,26 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
     alert("Ocurrió un error. Intenta de nuevo.");
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const esCelular = window.matchMedia('(max-width: 768px)').matches;
+
+    if (esCelular) {
+      const cards = document.querySelectorAll('.card');
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          if (!card.classList.contains('flipped')) {
+            card.classList.add('flipped');
+            setTimeout(() => {
+              card.classList.remove('flipped');
+            }, 3000); // 3 segundos
+          }
+        });
+      });
+    }
+  });
+
 </script>
 
 <body>
@@ -405,7 +425,7 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
   <section id="servicios">
     <h2 class="titulo-contenedor">Servicios</h2>
    <div class="cards-servicios">
-  <div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card">
     <div class="card-inner">
       <div class="card-front">
         <img src="masaje.jpg" alt="Masaje relajante">
@@ -417,7 +437,7 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
     </div>
   </div>
 
-  <div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card">
     <div class="card-inner">
       <div class="card-front">
         <img src="facial.jpg" alt="Facial hidratante">
@@ -429,7 +449,7 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
     </div>
   </div>
 
-  <div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card">
     <div class="card-inner">
       <div class="card-front">
         <img src="limpieza.jpg" alt="Limpieza profunda">
@@ -441,7 +461,7 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
     </div>
   </div>
 
-  <div class="card" onclick="this.classList.toggle('flipped')">
+  <div class="card">
     <div class="card-inner">
       <div class="card-front">
         <img src="aromaterapia.png" alt="Aromaterapia">
